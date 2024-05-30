@@ -1,102 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .bio img {
-  float: left;
-  margin-right: 20px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  animation: spin 4s linear infinite; /* Hier voegen we de animatie toe aan het element */
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: spin 4s linear infinite;
 }
 
-  .container {
+.container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 250px auto auto 250px; /* Explicitly set the height for the footer */
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas: 
-      "header"
-      "nav"
-      "article"
-      "footer";
-  }
+        "header"
+        "nav"
+        "article"
+        "footer";
+    height: 100vh;
+}
 
-/* ... (existing styles) ... */
-
-  header {
+header {
     grid-area: header;
     height: 100px;
     background-color: #7CB9E8;
     display: grid;
-    color: white; 
-    place-items: center; 
-  }
+    color: white;
+    place-items: center;
+}
 
-
-  footer {
+footer {
     background-color: #7CB9E8;
     grid-area: footer;
     height: 50px;
     place-items: center;
     display: grid;
-    color: white; 
-  }
-  
-  article {
+    color: white;
+}
+
+article {
     grid-area: article;
     background-color: #f4f4f4;
-  }
-  
-  .container {
     padding: 20px;
-  }
-  
-  .bio {
+}
+
+.bio {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
+}
 
-
-  nav {
+nav {
     background-color: #7CB9E8;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    }
+}
 
-  ul {
-    list-style-type: none; /* Verwijder de standaard opmaak voor lijsten */
+ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
     overflow: hidden;
-  }
+}
 
-  li {
-    float: left; /* Laat de lijsten naast elkaar uitlijnen */
-  }
+li {
+    float: left;
+}
 
-  li a {
-    display: block; /* Maak de koppelingen blok-elementen */
-    color: white; /* Tekstkleur van de koppelingen */
+li a {
+    display: block;
+    color: white;
     text-align: center;
-    padding: 14px 16px; /* Ruimte binnen de koppelingen */
-    text-decoration: none; /* Verwijder de onderstreping van de koppelingen */
-  }
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-  li a:hover {
-    background-color: #111; /* Achtergrondkleur veranderen wanneer de muis erover beweegt */
-  }
+li a:hover {
+    background-color: #111;
+}
 
-  * {
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-  }
+    box-sizing: border-box;
+}
